@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="notify-hub.api/notify-hub.api.csproj" />
+  <Project Path="notify-hub.application/notify-hub.application.csproj" />
+  <Project Path="notify-hub.domain/notify-hub.domain.csproj" />
+  <Project Path="notify-hub.infrastructure/notify-hub.infrastructure.csproj" />
+</Solution>
