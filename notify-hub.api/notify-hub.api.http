@@ -1,6 +1,24 @@
 @notify_hub.api_HostAddress = http://localhost:5143
 
-GET {{notify_hub.api_HostAddress}}/weatherforecast/
+### Create Notification
+POST {{notify_hub.api_HostAddress}}/api/notifications
+Content-Type: application/json
+
+{
+  "recipientId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "title": "Welcome to NotifyHub",
+  "message": "Your account has been set up successfully."
+}
+
+### Get Notification by ID
+GET {{notify_hub.api_HostAddress}}/api/notifications/3fa85f64-5717-4562-b3fc-2c963f66afa6
 Accept: application/json
+
+### Get Notifications by Recipient ID
+GET {{notify_hub.api_HostAddress}}/api/notifications/recipient/3fa85f64-5717-4562-b3fc-2c963f66afa6
+Accept: application/json
+
+### Mark Notification as Read
+PATCH {{notify_hub.api_HostAddress}}/api/notifications/3fa85f64-5717-4562-b3fc-2c963f66afa6/read
 
 ###
